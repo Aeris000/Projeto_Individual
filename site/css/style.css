@@ -1,0 +1,39 @@
+.header
+{
+    /* div shape */
+    width: 100%;
+    height: 60px;
+    background-color:#19241A ;
+    border-radius: 15px;
+    border: #162017 solid 2px;
+    margin: 4px;
+    /* text */
+    color: #F2DD80 ;
+    text-align: left;
+    font-size:x-large;
+}
+
+.container_back{
+    display: flex;
+    width: 100%;
+    height: 690px;
+    background-image: url(../img/Screenshot_2.png);
+    
+}
+
+body{
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.titulo{
+    width: 500px;
+    text-align: center;
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute; 
+	left: 440px; 
+	top: 330px;
+}
