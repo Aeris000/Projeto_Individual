@@ -6,7 +6,7 @@ body{
 }
 
 *{
-font-family: 'georgia';
+/* font-family: 'georgia'; */
 }
 
 .header
@@ -23,9 +23,15 @@ font-family: 'georgia';
     justify-content: space-around;
     /* text */
     color: #F2DD80 ;
+    font-family: Metropolis-black;
     /* text-align: left; */
     font-size: xxx-large;
 }
+
+@font-face {
+    font-family: Metropolis-black;
+    src: url(../img/Metropolis-Black.otf);
+  }
 
 li{
     
@@ -84,15 +90,14 @@ color: #ac9c4f;
 }
 
 .imagem_floresta{
-    height: 310px;
-    width: 310px;
+    height: 330px;
+    width: 330px;
     background-color: red;
-     /* background-image: url(../img/moldura_recortada.png);  */
 }
 
 .imagem_flor{
-    height: 310px;
-    width: 310px;
+    height: 330px;
+    width: 330px;
 }
 
 .container_back_historia{
@@ -100,4 +105,14 @@ color: #ac9c4f;
     background-image: url(../img/background_3_minhahist.png);
     height: 700px;
     width: 100%;
+}
+
+.sinopse{
+    /* div shape */
+    height: 320px;
+    width: 450px;
+    background-color: blue;
+    /* text */
+    font-family: 'georgia';
+    font-size: x-large;
 }
