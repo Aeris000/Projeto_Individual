@@ -92,12 +92,15 @@ color: #ac9c4f;
 .imagem_floresta{
     height: 330px;
     width: 330px;
-    background-color: red;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagem_flor{
-    height: 330px;
-    width: 330px;
+    height: 390px;
+    width: 390px;
 }
 
 .container_back_historia{
@@ -111,8 +114,102 @@ color: #ac9c4f;
     /* div shape */
     height: 320px;
     width: 450px;
-    background-color: blue;
+    /* background-color: blue; */
     /* text */
     font-family: 'georgia';
     font-size: x-large;
+}
+
+.imagem_livro{
+    /* div shape */
+    height: 500px;
+    width: 370px;
+    /* background-color: yellow; */
+}
+
+.imagem_liv{
+    height: 500px;
+    width: 370px;
+}
+
+.imagem_abertura_texto{
+    -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(180deg);
+}
+
+
+.img_fechamento_texto{
+    /* color: green; */
+    height: 120px;
+    width: 100px;
+}
+
+.container_texto{
+    height: 520px;
+    width: 450px;
+    /* background-color: orangered; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* historia */
+
+.container_back_historia{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.div_titulo_hist{
+    height: 200px;
+    width: 600px;
+    background-color: blue;
+}
+.container_tit_text{
+    height: 690px;
+    width: 870px; 
+    background-color: orangered;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.div_hist{
+    height: 500px;
+    width: 870px;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div_1_hist{
+    height: 400px;
+    width: 435px;
+    background-color: red;
+        /* text */
+        font-family: 'georgia';
+        font-size: 22px;
+        text-shadow: 1px 1px rgb(108, 106, 78);
+}
+
+.div_2_hist{
+    height: 400px;
+    width: 435px;
+    background-color: yellow;
+            /* text */
+            font-family: 'georgia';
+            font-size: 22px;
+            text-shadow: 1px 1px rgb(108, 106, 78);
+}
+
+.cont_img_sun{
+    height: 400px;
+    width: 370px;
+    background-color: green;
+    align-self: flex-start;
+
 }
