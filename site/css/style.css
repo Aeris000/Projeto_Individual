@@ -86,7 +86,7 @@ color: #ac9c4f;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around; /* !!!!!!!!!! mudar quando colocar mais imagens */
+    justify-content: space-around; 
 }
 
 .imagem_floresta{
@@ -236,7 +236,7 @@ color: #ac9c4f;
     width: 670px;
     /* background-color: green; */
 font-family: Metropolis-black ;
-font-size: 45px;
+font-size: 50px;
 text-align: center;
 padding-top: 40px;
 }   
@@ -262,6 +262,7 @@ padding-top: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 #img_book{
     height: 100px;
@@ -276,6 +277,7 @@ padding-top: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 #img_crown{
     height: 100px;
@@ -306,6 +308,7 @@ padding-top: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 #img_sword{
     height: 100px;
@@ -351,4 +354,37 @@ padding-top: 40px;
 .container_back_contato{
     height: 690px;
     width: 870px; 
+}
+
+.container_back_contato{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 690px;
+    background-image: url(../img/background_6_contato);
+    
+}
+
+.contato_titulo{
+    color:  #162017;
+    text-align: center;
+  text-shadow: 3px 0 #F2DD80, -3px 0 #F2DD80, 0 3px #F2DD80, 0 -3px #F2DD80,
+    2px 2px #F2DD80, -2px -2px #F2DD80, 2px -2px #F2DD80, -2px 2px #F2DD80;
+    letter-spacing: 9px;
+    font-size: 65px;
+    font-family: Metropolis-black;
+    align-items: center; 
+     justify-content: center; 
+
+    margin-top: 50px;
+}
+
+.contato_subtitulo{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: Metropolis-black;
+    align-items: center; 
+    justify-content: center; 
 }
