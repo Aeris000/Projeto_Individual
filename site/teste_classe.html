@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="css" href="css/style_teste.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_background">
+        <div class="question_display"></div>
+
+
+        <div id="answer_display_container">
+            <div id="container_buttons">
+                <button onclick="a()">A</button>
+
+                <button onclick="b()">B</button>
+
+                <button onclick="c()">C</button>
+
+                <button onclick="d()">D</button>
+            </div>
+
+            <div id="container_display_answer">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    var lista_classe = ['Mago', 'Aldeão', 'Realeza', 'Criatura da Floresta']
+    var lista_pergunta = ['banana?', 'maca?', 'uva?', 'pera?']
+    var lista_resposta = ['aa', 'bb', 'cc', 'dd', 'aa', 'bb', 'cc', 'dd']
+    var contador_a = 0
+    var contador_b = 0
+    var contador_c = 0
+    var contador_d = 0
+    var abcd = [contador_a, contador_b, contador_c, contador_d]
+
+
+    function a() {
+        contador_a++
+    }
+
+    function b() {
+        contador_b++
+
+    }
+    function c() {
+        contador_c++
+    }
+    function d() {
+        contador_d++
+    }
+
+    var resposta_recorrente = abcd[0]
+
+    for (i = 0; i <= abcd.length; i++) {
+        var resultado = 0
+        if (abcd[i] > resposta_recorrente) {
+            resposta_recorrente = abcd[i]
+        }
+    }
+</script>

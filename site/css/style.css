@@ -40,6 +40,11 @@ li{
     text-indent: 10px;
     
 }
+
+li a{
+    color: #F2DD80;
+    text-decoration: none;
+}
 .navbar{
     display: flex;
     justify-content: end;
@@ -110,7 +115,7 @@ color: #ac9c4f;
     width: 100%;
 }
 
-.sinopse{
+.sinopse_text{
     /* div shape */
     height: 320px;
     width: 450px;
