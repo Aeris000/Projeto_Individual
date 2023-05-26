@@ -8,16 +8,61 @@ body{
 
 .container_background{
     width: 100%;
-    height: 560px;
+    height: 670px;
     background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 
 
 .question_display{
-    width: 500px;
-    height: 300px;
+    width: 580px;
+    height: 280px;
     background-color: blue;
+}
+
+#container_answer_buttons{
+    height: 360px;
+    width: 900px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#container_buttons{
+    height: 360px;
+    width: 100px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    height: 40px;
+    width: 90px;
+}
+
+
+#container_display_answer{
+    height: 360px;
+    width: 800px;
+    background-color: rgb(9, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.display_answer{
+    height: 40px;
+    width: 730px;
+    background-color: rgb(255, 0, 217);
 }
 
 
