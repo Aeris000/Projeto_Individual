@@ -7,7 +7,7 @@ body{
 
 #div_nome{
     width: 100%;
-    background-color: rgb(9, 12, 112);
+    background-image: url(../img/background_sinopse.png);
     height: 900px;
 }
 
@@ -15,17 +15,18 @@ body{
     border-radius: 15px;
     width: 300px;
     height: 60px;
+    font-size: 30px;
 }
 
 
 .container_background_teste{
     width: 100%;
     height: 800px;
-    background-color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-image: url(../img/background_resultado_teste.png);
 }
 
 
@@ -89,7 +90,7 @@ body{
   .but:hover {
     background-color: #F2DD80;
     box-shadow: 0 3px #666;
-    border: none;
+    border: solid 2px #052F32;
     color: #162017;
 }
 
@@ -186,3 +187,29 @@ body{
         transform: translateY(4px);
       }
 
+      
+      #div_resultado{
+        width: 900px;
+        height: 900px;
+        text-align: center;
+        
+      }
+
+      #container_resultado_titulo{
+        width: 100%;
+      }
+
+      #resultado_titulo{
+        font-size: 60px;
+      }
+
+      #container_resultado_text
+      {font-family: 'georgia';
+      font-size: 22px;
+      text-shadow: 1px 1px #504306;
+      padding: 20px;
+    }
+    
+
+      
+     

@@ -268,12 +268,26 @@
                 <div onclick="salvarResposta('d')" id="d_q7" class="display_answer">
                     Numa cidade tranquila onde todos os vizinhos se conhecem </div>
 
-
             </div>
 
+        </div>
+
+
+        <div id="div_resultado" class="exibir">
+
+            <div id="container_resultado_titulo">
+                <h1>
+                    <div id="resultado_titulo"></div>
+                </h1>
+            </div>
+
+            <div id="container_resultado_img"></div>
+            <div id="container_resultado_text"></div>
+            <button id="refazer_teste" class="but" onclick="refazer_teste()"> Refazer teste </button>
 
 
         </div>
+
 
         <button id="but_finalizar" class="but" onclick="finalizar()" style="display: none;"> Finalizar teste </button>
 
@@ -281,10 +295,10 @@
         <button id="avancar" class="but" onclick="button_avancar()" style="display: none;"> Avançar </button>
     </div>
 
+
     <div class="container_background_chart">
         <div class="display_chart"></div>
-        <button class="but" id="button_home"> <a id="link_"
-                href="C:\Users\bbiza\OneDrive\Área de Trabalho\projeto individual\Projeto_individual\site\java\home.html">
+        <button class="but" id="button_home"> <a id="link_" href="../java/Index.html">
                 Retornar à página inicial </a> </button>
     </div>
 
@@ -293,7 +307,16 @@
 </html>
 
 <script>
-    var lista_classe = ['Mago', 'Aldeão', 'Realeza', 'Criatura da Floresta']
+    var lista_classe = ['Mago', 'Realeza', 'Criatura da Floresta', 'Aldeão']
+    var lista_img = ['<img src="../img/result_mago.png" style="height: 300px; width: 300px;">',
+        '<img src="../img/result_realeza.png" style="height: 300px; width: 320px;">',
+        '<img src="../img/result_criatura.png" style="height: 300px; width: 190px;">',
+        '<img src="../img/result_aldeao.png" style="height: 300px; width: 320px;">',
+    ]
+    var lista_text = ["Magos são",
+        "blablabla realeza",
+        "As criaturas da Floresta são conhecidas por serem extremamente poderosas e até instáveis, ",
+        "blablabla aldeao"]
 
     var respostaAtual = ""
     var contador_a = 0
@@ -310,8 +333,10 @@
             div_nome.style.display = "none";
             q1.style.display = "flex";
             avancar.style.display = "inline-block";
-
         }
+
+        var nome_inserido = inp_nome.value
+        console.log(nome_inserido)
     }
 
     function salvarResposta(resposta) {
@@ -328,16 +353,16 @@
             return
         } else if (respostaAtual == "a") {
             contador_a++
-            abcd.splice(0,1,contador_a)
+            abcd.splice(0, 1, contador_a)
         } else if (respostaAtual == "b") {
             contador_b++
-            abcd.splice(1,1,contador_b)
+            abcd.splice(1, 1, contador_b)
         } else if (respostaAtual == "c") {
             contador_c++
-            abcd.splice(2,1,contador_c)
+            abcd.splice(2, 1, contador_c)
         } else {
             contador_d++
-            abcd.splice(3,1,contador_d)
+            abcd.splice(3, 1, contador_d)
         }
         respostaAtual = "";
 
@@ -369,6 +394,10 @@
             q7.style.display = "flex";
             avancar.style.display = "none";
             but_finalizar.style.display = "inline-block";
+        } else if (q7.style.display === "flex") {
+            q7.style.display = "none";
+            but_finalizar.style.display = "none";
+            div_resultado.style.display = "flex";
         }
 
 
@@ -381,7 +410,7 @@
         button_avancar()
 
         var recorrente = 0
-
+        var resultado = 'a'
         for (i = 0; i <= abcd.length; i++) {
 
             if (abcd[i] >= recorrente) {
@@ -390,29 +419,49 @@
 
         }
 
-        if( recorrente === 0){
-            alert('A')
-            }
+        if (recorrente === contador_a) {
+            resultado_titulo.innerHTML = `${lista_classe[0]}`
+            container_resultado_img.innerHTML = `${lista_img[0]}`
+            container_resultado_text.innerHTML = `${lista_text[0]}`
+        }
 
-            if( recorrente === 1){
-            alert('B')
-            }
+        if (recorrente === contador_b) {
+            resultado_titulo.innerHTML = `${lista_classe[1]}`
+            container_resultado_img.innerHTML = `${lista_img[1]}`
+            container_resultado_text.innerHTML = `${lista_text[1]}`
+        }
 
-            if( recorrente === 2){
-            alert('C')
-            }
+        if (recorrente === contador_c) {
+            resultado_titulo.innerHTML = `${lista_classe[2]}`
+            container_resultado_img.innerHTML = `${lista_img[2]}`
+            container_resultado_text.innerHTML = `${lista_text[2]}`
+        }
 
-            if(recorrente === 3){
-            alert('D')
-            }
+        if (recorrente === contador_d) {
+            resultado_titulo.innerHTML = `${lista_classe[3]}`
+            container_resultado_img.innerHTML = `${lista_img[3]}`
+            container_resultado_text.innerHTML = `${lista_text[3]}`
+        }
+    }
+
+    function refazer_teste() {
+
+        abcd = [contador_a, contador_b, contador_c, contador_d];
+        contador_a = 0;
+        contador_b = 0;
+        contador_c = 0;
+        contador_d = 0;
+
+
+        if (div_resultado.style.display == "flex") {
+            div_nome.style.display = "flex";
+            div_resultado.style.display = "none";
+
+        }
 
 
     }
 
-
-    // criar lógica que quando acabar o jogo, se contabiliza os contadores somados e dá push naquela 
-    // var ABCD, só então ocorre a validação que percorre o vetor ABCD e traz o item com maior valor
-    // pra correlacionar com o reultado 
 
 
 

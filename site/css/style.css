@@ -326,6 +326,8 @@ padding-top: 40px;
     border-radius: 20px;
     border: solid 2px #052F32;
     font-size: large;
+    font-weight: 600;
+    padding: 2px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color:#E6F4D0;
     display: flex;
@@ -343,7 +345,11 @@ padding-top: 40px;
     display: flex;
     align-items: center; /* vertical */
      justify-content: center; /* horizontal */
+     
 }
+
+
+
 
 #but_teste{
     height: 68px;
@@ -354,6 +360,21 @@ padding-top: 40px;
     font-family: Metropolis-black;
     font-size: x-large;
     color: #F2DD80;
+}
+
+#but_teste:hover {
+    background-color: #F2DD80;
+   color: #052F32;
+}
+  
+  #but_teste:active {
+    background-color: #baa95e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+a{
+    text-decoration: none;
 }
 
 .container_back_contato{
