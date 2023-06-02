@@ -20,4 +20,8 @@ router.post("/usuario", function (req, res) {
     testeController.cadastrarUsuario(req, res);
 })
 
+router.get("/pegarclasse/:classe", function (req, res){
+    testeController.pegarClasse(req, res);
+}) 
+
 module.exports = router;

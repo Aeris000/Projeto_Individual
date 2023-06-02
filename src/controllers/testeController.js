@@ -12,7 +12,7 @@ function cadastrarTeste(req, res) {
     var c = req.body.cServer;
     var d = req.body.dServer;
 
-    console.log('asdhashdjkash')
+
     console.log(a)
     console.log(b)
     console.log(c)
@@ -64,6 +64,7 @@ function cadastrarUsuario(req, res) {
     // Faça as validações dos valores
     if (nome == undefined) {
         res.status(400).send("Seu nome está indefinido!");
+        
     } else if (email == undefined) {
         res.status(400).send("Seu email está indefinido!");
     }
@@ -89,7 +90,27 @@ function cadastrarUsuario(req, res) {
 }
 
 
+function pegarClasse(req, res){
+    var classe = req.params.classe
+
+    console.log(`Recu as classes`)
+
+    testeModel.acessarResultados(classe).then(function (resultado){
+        if (resultado.length > 0){
+            res.status(200).json(resultado);
+        }else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 module.exports = {
     cadastrarTeste,
-    cadastrarUsuario
+    cadastrarUsuario,
+    pegarClasse
 }
