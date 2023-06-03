@@ -89,13 +89,28 @@ function cadastrarUsuario(req, res) {
     }
 }
 
+function pegarClasseAtt(req, res){
+    console.log(`cgheuei nos modles`)
+
+    testeModel.acessarResultadosAtt().then(function (resultado){
+        if (resultado.length > 0){
+            res.status(200).json(resultado);
+        }else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 
 function pegarClasse(req, res){
-    var classe = req.params.classe
+    console.log(`cgheuei nos modles`)
 
-    console.log(`Recu as classes`)
-
-    testeModel.acessarResultados(classe).then(function (resultado){
+    testeModel.acessarResultados().then(function (resultado){
         if (resultado.length > 0){
             res.status(200).json(resultado);
         }else {
@@ -112,5 +127,6 @@ function pegarClasse(req, res){
 module.exports = {
     cadastrarTeste,
     cadastrarUsuario,
-    pegarClasse
+    pegarClasse,
+    pegarClasseAtt
 }
