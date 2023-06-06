@@ -222,9 +222,15 @@ li a {
 .cont_img_sun {
     height: 400px;
     width: 370px;
-    background-color: green;
+    /* background-color: green; */
     align-self: flex-start;
+    display: flex;
+    align-items: center ;
+}
 
+#img_sun{
+    height: 260px;
+    width: 370px;
 }
 
 .container_back_classes {
